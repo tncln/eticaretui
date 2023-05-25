@@ -8,8 +8,8 @@ export class CustomToastrService {
 
   constructor(private toastr:ToastrService) {}
   message(message:string, title:string, toastrOption:Partial<ToastrOption>){
-    this.toastr[messageType](message,title,{
-      positionClass:position
+    this.toastr[toastrOption.messageType](message,title,{
+      positionClass:toastrOption.position
     });
   }
 }
