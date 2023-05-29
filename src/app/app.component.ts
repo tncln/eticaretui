@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eticaretui';
+  constructor() {
+
+  }
 }
+
+$.get("localhost:7131/api/products");
