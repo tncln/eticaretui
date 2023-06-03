@@ -10,6 +10,4 @@ export class AppComponent {
   constructor() {
 
   }
-}
-
-$.get("localhost:7131/api/products");
+} 
