@@ -4,7 +4,7 @@ import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { HttpClientService } from 'src/app/services/common/http-client.service';
 import * as $ from 'jquery';
 import { ajax, css } from "jquery";
-import { Product } from 'src/app/contracts/product';
+import { Create_Product } from 'src/app/contracts/create_product';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -20,7 +20,7 @@ export class ProductsComponent extends BaseComponent implements OnInit {
   }
   ngOnInit(): void {
     this.showSpinner(SpinnerType.BallSpinClockWiseFadeRotating);
-    this.httpClientService.get<Product[]>({
+    this.httpClientService.get<Create_Product[]>({
       controller: "products"
     }).subscribe(data => console.log(data));
 
